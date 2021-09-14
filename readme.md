@@ -9,4 +9,4 @@ Something about this site
 
 ---
 
-## check website: [live site]()
+## check website: [live site](https://matejduben.github.io/SofaIsBest-website/index.html)
