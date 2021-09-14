@@ -1,0 +1,349 @@
+*{
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+nav{
+  width: 100%;
+  position: absolute; /*fixed*/
+
+}
+
+.menu li a{
+  text-decoration: none;
+  color: rgb(41, 41, 41);
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.menu li a:hover{
+  letter-spacing: 1px;
+  color: rgb(122, 152, 179);
+
+}
+
+
+/* hero image */
+.hero-box{
+  height: 80vh;
+  width: 100%;
+  background-image: url(../../pic/house-2593570_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;  /* Back size robi ze sa obrazok zmensuje  a navbar je potom biely */
+  background-position-y: center;
+  background-attachment: fixed;   /* spravi to parallax efekt */
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+
+}
+
+.headline{
+  position: absolute;
+  color: black;
+  width: 100%;
+  top: 18%;
+  left: 0;
+  z-index: -1;
+}
+
+.headline-title{
+  text-align: center;
+  font-size: 50px;
+  
+
+}
+.headline h4{
+  margin-top: 2%;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 4%;
+}
+.headline-text{
+  width: 150px;
+  margin: auto;
+  text-align: center;
+  font-size: 25px;
+} 
+
+
+/* Main content/text about sofa */
+
+.section-s1{
+  height: 80vh;
+}
+
+.main-content{
+  height: auto;
+  position: absolute;
+  margin-top: 10%;
+  width: 100%;
+  z-index: -1;
+}
+
+.main-content h1{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+.main-content p{
+  font-family: sans-serif;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 500px;
+
+}
+
+
+/* section s2 black part */
+
+.section-s2{
+  position: relative;
+  width: 100%;
+  background-image: url(../../pic/locaiton-bgimg.jpg);
+  object-fit: cover;
+  background-attachment: fixed;
+  height: 40vh;
+  z-index: -1;
+
+}
+
+
+.black-part{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.black-part svg {
+  height: 80%;
+  width: auto;
+  margin: auto;
+  
+}
+
+/* section-s3 products */
+
+.section-s3{
+  height: 120vh;
+}
+
+.big-pic-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.big-pic{
+  z-index: -1;
+  position: relative;
+  margin-top: 8%;
+  height: 70vh;
+  width: 100%;
+}
+
+.big-pic img{
+  display: block;
+  width: auto;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 50px black;
+}
+
+
+.big-pic-text{
+  cursor: default;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  top: 70px;
+  opacity: 0.4;
+  transition: 0.3s ease-in-out;
+}
+.big-pic-text:hover{
+  opacity: 1;
+}
+
+.big-pic-text h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+
+.big-pic-text p{
+  font-family: sans-serif;
+  font-size: 18px;
+  position: relative;
+  width: 500px;
+  margin-top: 20px;
+}
+
+
+/* section s4 z netu skopitovane efekty */
+
+.section-s4{
+ 
+  height: 80vh;
+}
+.products{
+  display: flex; 
+  justify-content: space-evenly;
+}
+
+.product-title{
+  text-align: center;
+  margin-bottom: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+
+
+.product {
+  top: 15%;
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 220px;
+  width: 100%;
+  text-align: center;
+}
+.product * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.product img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+.product figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.product figcaption > div {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  position: relative;
+}
+.product figcaption::before {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  width: 2px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.product h2,
+.product p {
+  margin: 0;
+  padding: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+  transition: opacity 0.45s,-webkit-transform 0.45s,-moz-transform 0.45s,-o-transform 0.45s,transform 0.45s;
+}
+
+.product h2 {
+  text-align: right;
+  display: inline-block;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate3d(50%, 0%, 0);
+  transform: translate3d(50%, 0%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.product h2 span {
+  font-weight: 800;
+}
+.product p {
+  display: block;
+  bottom: 0;
+  text-align: left;
+  font-weight: 300;
+  top: 0%;
+  color: #000;
+  background: #ffffff;
+  -webkit-transform: translate3d(-50%, 0%, 0);
+  transform: translate3d(-50%, 0%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.product a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+
+
+.product:hover img {
+  opacity: 0.7;
+}
+.product:hover figcaption h2,
+.product:hover figcaption p {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.product:hover figcaption h2 {
+  opacity: 1;
+}
+.product:hover figcaption p {
+  opacity: 1;
+}
+.product:hover figcaption::before {
+  background: #ffffff;
+  top: 0px;
+  bottom: 0px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+

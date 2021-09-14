@@ -1,0 +1,93 @@
+*{
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+header{
+  height: 10vh;
+}
+
+
+.menu li a{
+  text-decoration: none;
+  color: rgb(41, 41, 41);
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.menu li a:hover{
+  letter-spacing: 1px;
+  color: rgb(122, 152, 179);
+
+}
+
+  /* section contact */
+
+.contact-sec{
+  height: auto;
+  width: 100%;
+}
+
+.text-div{
+  
+  position: absolute;
+  width: 500px;
+  top: 40%;
+  left: 15%;
+  height: auto;
+}
+
+.title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: left;
+
+}
+
+.text-div p{
+  font-size: 18px;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+.background-picture{
+  position: absolute;
+  top: 0;
+  background-image: url(../../pic/chairs-2181994_1920.jpg);
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-size: 100%;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+  /* Button */
+
+.button-products{
+
+  /* background-color: rgb(109, 109, 109); */
+  background-color: #c5c9d2;
+  position: relative;
+  top: 50px;
+  left: 50%;
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  border: 4px solid #b4b4b4 ;
+  color: #ffffff;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+}
+
+.button-products:hover{
+  color: #ffffff !important;
+  background: #2281D1;
+  border-color: #0e5792  !important;
+  transition: all 0.4s ease 0s;
+}

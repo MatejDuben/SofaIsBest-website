@@ -1,0 +1,406 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 2000px;    
+  font-family: Helvetica;
+}
+/* slider je pozadie heroImage */
+.main-slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /*znamena ze na fullscreen celych 100 */
+  background-image: linear-gradient(-225deg, rgb(199, 199, 199) 0%, rgb(109, 109, 109) 100%);
+  z-index: -1;
+}
+
+
+/* hero pic */
+
+.hero_section{
+  text-decoration: none;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+ 
+}
+
+.hero{
+  display: flex;
+}
+
+.hero{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.hero::after{
+  content: "";
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+
+
+
+
+/* slider */
+
+.slide{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.slide img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+.slide-buttons{
+  display: flex;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  
+}
+.arrow{
+  cursor: pointer;
+  margin: 0 10%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+}
+.dot{
+  cursor: pointer;
+  opacity: 0.5;
+}
+.dot:hover{
+  opacity: 1;
+}
+
+.dot.active{
+  opacity: 1;
+}
+
+.fade{
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade{
+  from{
+    transform: translateX(-20px);
+    opacity: 0.8;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* titulok */
+.headline{
+  font-family: Helvetica;
+  text-decoration: none;
+  cursor: default;
+  font-size: 80px;
+  position: absolute;
+  top: 80%;
+  left: -1.5%;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.headline:hover{
+  color: #BDD3DE;
+  transform: translateX(200px);
+}
+
+
+/* section s1 */
+
+
+.section-s1{
+  width: 100%;
+  height: 95vh;
+
+}
+
+
+
+#under-title{
+  
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 800;
+  margin-top: 9%;
+  margin-bottom: auto;
+  font-size: 40px;
+  text-align: center;
+}
+
+.sofa{
+
+  display: flex;
+  flex-direction: row;
+  margin-top: 8%;
+}
+
+.sofa-pic{
+  margin-left: 2%;
+  width: 50%;
+  
+}
+
+.sofa-pic img{
+  box-shadow: 0 10px 20px black;
+  border-radius: 20%;
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  z-index: -1;
+}
+
+
+
+.sofa-info-first{
+
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: 15%;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+
+
+.sofa-info-first h3{
+  font-size: 50px;
+  display: inline-block;
+  margin-top: 3%;
+  margin-left: 25%;
+}
+.sofa-info-first p{
+
+  margin-top: 50px;
+  width: 500px;
+  margin-left: 20%;
+}
+
+/* section s2 */
+
+.section-s2{
+
+  height: 80vh;
+  width: 100%;
+}
+
+
+.sofa-2{
+  
+  display: flex;
+  flex-direction: row;
+}
+
+.sofa-info-second{
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-top: 7%;
+  height: auto;
+}
+
+.sofa-info-second h3{
+  font-size: 50px;
+  display: inline-block;
+  margin-top: 3%;
+  margin-left: 23%;
+
+}
+.sofa-info-second p{
+  width: 500px;
+  margin-top: 50px;
+  margin-left: 20%;
+}
+
+
+.sofa-pic-second img{
+  box-shadow: 0 10px 20px black;
+  left: auto;
+  right: 2%;
+  border-radius: 20%;
+  position: absolute;
+  height: 70%;
+  width: 50%;
+  z-index: -1;
+}
+
+.button-product{
+
+  color: rgb(94, 94, 94);
+  text-decoration: none;
+  margin-top: 50px;
+  margin-left: 25%;
+
+  text-transform: uppercase;
+
+  background: #9ff4ff;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.button-product:hover{
+  color: white;
+  background: #00e1ff;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+
+
+/* sponsors section s3 */
+
+.section-s3{
+  position: relative;
+  top: 5%;
+}
+
+.section-s3 h1{
+  position: relative;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-family: 'Varela Round', sans-serif;
+  letter-spacing: 2px;
+  top: 30px;
+
+}
+
+.sponsors{
+  margin-top: 2%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+}
+
+
+.back-div{
+  position: relative;
+  background-color: rgb(28, 28, 48);
+  width: 100%;
+  height: 60vh;
+  margin-top: 2%;
+  z-index: -1;
+}
+/* 1400 */
+
+@media screen and (max-width:1400px) {
+  #headline{
+    font-size: 64px;
+  }
+  .section-s1{
+    
+  }
+  .sofa{
+    margin-top: 4%;
+  }
+  .sofa-pic{
+    margin-left: 2%;
+    width: 50%;
+    
+  }
+  
+  .sofa-pic img, .sofa-pic-second img{
+    width: 40%;
+    height: 70%;
+  }
+  
+  .sofa-info-first{
+    margin: 0;
+    margin-top: 2%;
+    margin-right: 20%;
+  }
+
+
+
+  .sofa-info-first h3,.sofa-info-second h3{
+    font-size: 44px;
+
+  }
+
+  /* section s2 */
+
+.section-s2{
+
+  height: 95vh;
+  width: 100%;
+}
+.sofa-2{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sofa-info-second{
+  margin-top: 2%;
+}
+
+
+
+
+}
+
+@media screen and (max-width:1170px) {
+  .sofa-info-first{
+    margin: 0;
+    margin-top: 2%;
+    margin-right: 13%;
+    
+  }
+  .sofa-info-second{
+    margin-top: 2%;
+    
+  }
+  .sofa-info-first h3,.sofa-info-second h3{
+    font-size: 38px;
+
+  }
+  .sofa-info-second h3{
+    
+    margin-left: 13%;
+    width: 67%;
+    
+  
+  }
+  .sofa-info-second p{
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 10%;
+  }
+}
